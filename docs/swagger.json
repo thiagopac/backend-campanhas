@@ -1,0 +1,28 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Backend Campanhas API",
+    "version": "1.0.0",
+    "description": "backend-campanhas API docs"
+  },
+  "paths": {
+    "/api/scrap/feed/{team}": {
+      "get": {
+        "tags": ["ScrapController"],
+        "summary": "Retrieve team feed",
+        "parameters": [
+          {
+            "name": "team",
+            "in": "path",
+            "required": true,
+            "description": "Team name to retrieve feed for",
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": { "200": { "description": "Successful response with team feed" } }
+      }
+    }
+  },
+  "components": {},
+  "tags": []
+}
