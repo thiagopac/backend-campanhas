@@ -1,6 +1,5 @@
 import Campanha from 'App/Models/Campanha'
 import { DateTime } from 'luxon'
-import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 
 export default class CampanhaService {
   public static async create(data: any) {
@@ -28,7 +27,7 @@ export default class CampanhaService {
     return await Campanha.query().where('id', id).andWhereNull('deleted_at').firstOrFail()
   }
 
-  public static async update({ params, request }: HttpContextContract) {
+  public static async update(params, request) {
     const updateData = request.only(['nome', 'dataInicio', 'dataFim', 'categoria', 'status'])
     const campanha = await Campanha.findOrFail(params.id)
 
