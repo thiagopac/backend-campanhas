@@ -42,7 +42,7 @@ yarn  install
 
 ### 3. Configurar o arquivo .env
 
-Copie o arquivo .env.example para .env e ajuste as configurações
+Copie ou renomeie arquivo .env.example para .env
 
 ```bash
 
@@ -64,7 +64,15 @@ node  ace  migration:run
 
 ```
 
-### 6. Iniciar o servidor
+### 6. Rodar testes funcionais e unitários
+
+```bash
+
+node  ace  test
+
+```
+
+### 7. Iniciar o servidor
 
 ```bash
 
